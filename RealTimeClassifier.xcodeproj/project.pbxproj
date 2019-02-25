@@ -12,6 +12,8 @@
 		002147DB22243DCC00229D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002147D922243DCC00229D3C /* Main.storyboard */; };
 		002147DD22243E0B00229D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002147DC22243E0B00229D3C /* Assets.xcassets */; };
 		002147E022243E0B00229D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002147DE22243E0B00229D3C /* LaunchScreen.storyboard */; };
+		002147E8222442D100229D3C /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 002147E7222442D100229D3C /* Inceptionv3.mlmodel */; };
+		97185EFA45452512FD8FA070 /* Pods_RealTimeClassifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB7E5096D7604C8D64D647B /* Pods_RealTimeClassifier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		002147DC22243E0B00229D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002147DF22243E0B00229D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		002147E122243E0B00229D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002147E7222442D100229D3C /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		0AB7E5096D7604C8D64D647B /* Pods_RealTimeClassifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealTimeClassifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A0E86ED0D0FFB989E8F737 /* Pods-RealTimeClassifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTimeClassifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealTimeClassifier/Pods-RealTimeClassifier.release.xcconfig"; sourceTree = "<group>"; };
+		C56A31C3BB455A17793742CD /* Pods-RealTimeClassifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealTimeClassifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealTimeClassifier/Pods-RealTimeClassifier.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97185EFA45452512FD8FA070 /* Pods_RealTimeClassifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				002147D422243DCC00229D3C /* RealTimeClassifier */,
 				002147D322243DCC00229D3C /* Products */,
+				72F66E8E58CFDCDFA16ADB0A /* Pods */,
+				3A5126307DEC7BFE19CA3C81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				002147DC22243E0B00229D3C /* Assets.xcassets */,
 				002147DE22243E0B00229D3C /* LaunchScreen.storyboard */,
 				002147E122243E0B00229D3C /* Info.plist */,
+				002147E7222442D100229D3C /* Inceptionv3.mlmodel */,
 			);
 			path = RealTimeClassifier;
+			sourceTree = "<group>";
+		};
+		3A5126307DEC7BFE19CA3C81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB7E5096D7604C8D64D647B /* Pods_RealTimeClassifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72F66E8E58CFDCDFA16ADB0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C56A31C3BB455A17793742CD /* Pods-RealTimeClassifier.debug.xcconfig */,
+				59A0E86ED0D0FFB989E8F737 /* Pods-RealTimeClassifier.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002147E422243E0B00229D3C /* Build configuration list for PBXNativeTarget "RealTimeClassifier" */;
 			buildPhases = (
+				3B5B725AE9E039632F818893 /* [CP] Check Pods Manifest.lock */,
 				002147CE22243DCB00229D3C /* Sources */,
 				002147CF22243DCB00229D3C /* Frameworks */,
 				002147D022243DCB00229D3C /* Resources */,
+				25A0FC5FF80E153100DBBF41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25A0FC5FF80E153100DBBF41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RealTimeClassifier/Pods-RealTimeClassifier-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealTimeClassifier/Pods-RealTimeClassifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B5B725AE9E039632F818893 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealTimeClassifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		002147CE22243DCB00229D3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +217,7 @@
 			files = (
 				002147D822243DCC00229D3C /* ViewController.swift in Sources */,
 				002147D622243DCC00229D3C /* AppDelegate.swift in Sources */,
+				002147E8222442D100229D3C /* Inceptionv3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +361,13 @@
 		};
 		002147E522243E0B00229D3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56A31C3BB455A17793742CD /* Pods-RealTimeClassifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
 				INFOPLIST_FILE = RealTimeClassifier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +381,13 @@
 		};
 		002147E622243E0B00229D3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A0E86ED0D0FFB989E8F737 /* Pods-RealTimeClassifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
 				INFOPLIST_FILE = RealTimeClassifier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
